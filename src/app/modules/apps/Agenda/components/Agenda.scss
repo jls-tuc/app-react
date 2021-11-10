@@ -1,0 +1,146 @@
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.calendario-screen {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.rbc-calendar {
+  height: 100%;
+}
+
+.btn-color-Todos {
+  background-color: #a1d8a1;
+  color: #2d8a2d;
+  margin-right: 5px;
+  width: 100%;
+}
+
+.btn-color-Ministerio {
+  background-color: #80ACCA;
+  color: #065381;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-Coordinacion {
+  background-color: #84DDE9;
+  color: #2192a1;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-Defensa {
+  background-color: #B5B5E0;
+  color: #6E6EAF;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-ProteccionConsumidor {
+  background-color: #FFAAD8;
+  color: #F06277;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-Discapacidad {
+  background-color: #B7EBC6;
+  color: #44AB6C;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-DDHH {
+  background-color: #E2D6E3;
+  color: #B198B4;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-Mujeres {
+  background-color: #DFA8D3;
+  color: #AF5A9D;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-Consumidor {
+  background-color: #FFAAD8;
+  color: #F06277;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-Acceso {
+  background-color: #C4B8B9;
+  color: #84716B;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-Ciudades {
+  background-color: #D1DA9C;
+  color: #94A14C;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-148 {
+  background-color: #F88FC6;
+  color: #D23085;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-NqnLab {
+  background-color: #F7C298;
+  color: #Cf8044;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-OPRI {
+  background-color: #9DCDCF;
+  color: #4A9396;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-Diversidad {
+  background-color: #FCE59A;
+  color: #CEA838;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.btn-color-DAV {
+  background-color: #FC8C8C;
+  color: #D42727;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.calendario {
+  margin-right: 10px;
+}
