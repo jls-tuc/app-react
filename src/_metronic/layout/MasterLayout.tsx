@@ -1,12 +1,12 @@
-import React, {useEffect} from 'react'
-import {AsideDefault} from './components/aside/AsideDefault'
-import {Footer} from './components/Footer'
-import {HeaderWrapper} from './components/header/HeaderWrapper'
-import {Toolbar} from './components/toolbar/Toolbar'
-import {ScrollTop} from './components/ScrollTop'
-import {Content} from './components/Content'
-import {PageDataProvider, useLayout} from './core'
-import {useLocation} from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { AsideDefault } from './components/aside/AsideDefault'
+import { Footer } from './components/Footer'
+import { HeaderWrapper } from './components/header/HeaderWrapper'
+import { Toolbar } from './components/toolbar/Toolbar'
+import { ScrollTop } from './components/ScrollTop'
+import { Content } from './components/Content'
+import { PageDataProvider, useLayout } from './core'
+import { useLocation } from 'react-router-dom'
 import {
   DrawerMessenger,
   ExploreMain,
@@ -18,21 +18,21 @@ import {
 import { MenuComponent } from "../../_metronic/assets/ts/components";
 import clsx from 'clsx'
 
-const MasterLayout: React.FC = ({children}) => {
-  const {classes} = useLayout()
+const MasterLayout: React.FC = ({ children }) => {
+  const { classes } = useLayout()
 
-    const location = useLocation()
-    useEffect(() => {
-        setTimeout(() => {
-            MenuComponent.reinitialization()
-        }, 500)
-    }, [])
+  const location = useLocation()
+  useEffect(() => {
+    setTimeout(() => {
+      MenuComponent.reinitialization()
+    }, 500)
+  }, [])
 
-    useEffect(() => {
-        setTimeout(() => {
-            MenuComponent.reinitialization()
-        }, 500)
-    }, [location.key])
+  useEffect(() => {
+    setTimeout(() => {
+      MenuComponent.reinitialization()
+    }, 500)
+  }, [location.key])
 
   return (
     <PageDataProvider>
@@ -59,7 +59,7 @@ const MasterLayout: React.FC = ({children}) => {
 
       {/* begin:: Drawers */}
       <ActivityDrawer />
-      <ExploreMain />
+      {/* <ExploreMain /> */}
       <DrawerMessenger />
       {/* end:: Drawers */}
 
@@ -73,4 +73,4 @@ const MasterLayout: React.FC = ({children}) => {
   )
 }
 
-export {MasterLayout}
+export { MasterLayout }
