@@ -1,13 +1,12 @@
-import React, { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import ApexCharts, { ApexOptions } from 'apexcharts'
-import { KTSVG } from '../../../helpers'
-import { getCSSVariableValue } from '../../../assets/ts/_utils'
-import { ISTATE } from '../../../interface/reduxState.interface'
-import { IMENU } from '../../../../app/modules/auth/models/DashModel'
-import * as icons from "react-icons/md";
-import { BotonMenu } from '../botonmenu/BotonMenu'
+import React, {useEffect, useRef} from 'react'
+import {Link} from 'react-router-dom'
+import {useSelector} from 'react-redux'
+import ApexCharts, {ApexOptions} from 'apexcharts'
+import {KTSVG} from '../../../helpers'
+import {getCSSVariableValue} from '../../../assets/ts/_utils'
+import {ISTATE} from '../../../../setup/redux/interface/reduxState.interface'
+import {IMENU} from '../../../../app/modules/auth/models/DashModel'
+
 type Props = {
   className: string
   chartColor: string
@@ -233,7 +232,4 @@ const chartOptions = (
   }
 }
 
-export { MixedWidget2 }
-function dispatch(arg0: any) {
-  throw new Error('Function not implemented.')
-}
+export {MixedWidget2}

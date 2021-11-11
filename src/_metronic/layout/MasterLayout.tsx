@@ -1,25 +1,18 @@
-import React, { useEffect } from 'react'
-import { AsideDefault } from './components/aside/AsideDefault'
-import { Footer } from './components/Footer'
-import { HeaderWrapper } from './components/header/HeaderWrapper'
-import { Toolbar } from './components/toolbar/Toolbar'
-import { ScrollTop } from './components/ScrollTop'
-import { Content } from './components/Content'
-import { PageDataProvider, useLayout } from './core'
-import { useLocation } from 'react-router-dom'
-import {
-  DrawerMessenger,
-  ExploreMain,
-  ActivityDrawer,
-  Main,
-  InviteUsers,
-  UpgradePlan,
-} from '../partials'
-import { MenuComponent } from "../../_metronic/assets/ts/components";
+import React, {useEffect} from 'react'
+import {AsideDefault} from './components/aside/AsideDefault'
+import {Footer} from './components/Footer'
+import {HeaderWrapper} from './components/header/HeaderWrapper'
+import {Toolbar} from './components/toolbar/Toolbar'
+import {ScrollTop} from './components/ScrollTop'
+import {Content} from './components/Content'
+import {PageDataProvider, useLayout} from './core'
+import {useLocation} from 'react-router-dom'
+import {DrawerMessenger, ActivityDrawer, Main, InviteUsers, UpgradePlan} from '../partials'
+import {MenuComponent} from '../../_metronic/assets/ts/components'
 import clsx from 'clsx'
 
-const MasterLayout: React.FC = ({ children }) => {
-  const { classes } = useLayout()
+const MasterLayout: React.FC = ({children}) => {
+  const {classes} = useLayout()
 
   const location = useLocation()
   useEffect(() => {
@@ -73,4 +66,4 @@ const MasterLayout: React.FC = ({ children }) => {
   )
 }
 
-export { MasterLayout }
+export {MasterLayout}

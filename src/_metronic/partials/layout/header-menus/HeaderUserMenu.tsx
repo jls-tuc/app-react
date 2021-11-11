@@ -1,14 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { FC } from 'react'
-import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { logoutAction } from '../../../../app/modules/auth/actions/AuthActions'
+import {FC} from 'react'
+import {useDispatch} from 'react-redux'
+import {Link} from 'react-router-dom'
+import {logoutDashboard} from '../../../../setup/redux/ReduxActions/DashActions'
 
 const HeaderUserMenu: FC = () => {
   const user: any = ''
   const dispatch = useDispatch()
   const logout = () => {
-    dispatch(logoutAction())
+    dispatch(logoutDashboard())
+    sessionStorage.removeItem('token')
   }
 
   return (

@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { useFormik } from 'formik'
-import { login } from '../redux/AuthCRUD'
+import {useState} from 'react'
+import {useDispatch} from 'react-redux'
+import {useFormik} from 'formik'
+import {login} from '../Services/AuthService'
 import * as Yup from 'yup'
 import clsx from 'clsx'
 import jwt_decode from 'jwt-decode'
-import { loginAction } from '../actions/AuthActions'
-import { usrAction } from '../models/AuthModel'
-import { getOrg } from '../../../../_metronic/services/DashBoardServices'
-import { DashAction } from '../actions/DashActions'
+import {loginAction} from '../../../../setup/redux/ReduxActions/AuthActions'
+import {usrAction} from '../models/AuthModel'
+import {getOrg} from '../../../../_metronic/services/DashBoardServices'
+import {DashAction} from '../../../../setup/redux/ReduxActions/DashActions'
 
 const loginSchema = Yup.object().shape({
   usuario: Yup.string()
