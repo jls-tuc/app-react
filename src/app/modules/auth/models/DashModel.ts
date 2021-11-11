@@ -1,7 +1,7 @@
 export interface IMENU {
   descripcion?: string
   id?: string
-  menu?: [
+  menu: [
     {
       children?: []
       expandable?: boolean

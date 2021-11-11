@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useState} from 'react'
-import {KTSVG} from '../../../../../../_metronic/helpers'
+import React, { useState } from 'react'
+import { KTSVG } from '../../../../../../_metronic/helpers'
 import * as Yup from 'yup'
-import {useFormik} from 'formik'
-import {IUpdatePassword, IUpdateEmail, updatePassword, updateEmail} from '../SettingsModel'
+import { useFormik } from 'formik'
+import { IUpdatePassword, IUpdateEmail, updatePassword, updateEmail } from '../SettingsModel'
 
 const emailFormValidationSchema = Yup.object().shape({
   newEmail: Yup.string()
@@ -155,7 +155,7 @@ const SignInMethod: React.FC = () => {
                   >
                     {!loading1 && 'Update Email'}
                     {loading1 && (
-                      <span className='indicator-progress' style={{display: 'block'}}>
+                      <span className='indicator-progress' style={{ display: 'block' }}>
                         Please wait...{' '}
                         <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
                       </span>
@@ -276,7 +276,7 @@ const SignInMethod: React.FC = () => {
                   >
                     {!loading2 && 'Update Password'}
                     {loading2 && (
-                      <span className='indicator-progress' style={{display: 'block'}}>
+                      <span className='indicator-progress' style={{ display: 'block' }}>
                         Please wait...{' '}
                         <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
                       </span>
@@ -314,7 +314,7 @@ const SignInMethod: React.FC = () => {
           <div className='notice d-flex bg-light-primary rounded border-primary border border-dashed p-6'>
             <KTSVG
               path='/media/icons/duotune/general/gen048.svg'
-              className='svg-icon-2tx svg-icon-primary me-4'
+              className='svg-icon-2tx svg-icon-secondary me-4'
             />
             <div className='d-flex flex-stack flex-grow-1 flex-wrap flex-md-nowrap'>
               <div className='mb-3 mb-md-0 fw-bold'>
@@ -340,4 +340,4 @@ const SignInMethod: React.FC = () => {
   )
 }
 
-export {SignInMethod}
+export { SignInMethod }

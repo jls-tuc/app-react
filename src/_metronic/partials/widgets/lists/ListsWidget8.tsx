@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import {KTSVG, toAbsoluteUrl} from '../../../helpers'
-import {Dropdown1} from '../../content/dropdown/Dropdown1'
+import { KTSVG, toAbsoluteUrl } from '../../../helpers'
+import { Dropdown1 } from '../../content/dropdown/Dropdown1'
 
 type Props = {
   className: string
 }
 
-const ListsWidget8: React.FC<Props> = ({className}) => {
+const ListsWidget8: React.FC<Props> = ({ className }) => {
   return (
     <div className='card card-xl-stretch mb-5 mb-xl-8'>
       {/* begin::Header */}
@@ -40,7 +40,7 @@ const ListsWidget8: React.FC<Props> = ({className}) => {
           <div className='symbol symbol-60px symbol-2by3 me-4'>
             <div
               className='symbol-label'
-              style={{backgroundImage: `url(${toAbsoluteUrl('/media/stock/600x400/img-17.jpg')})`}}
+              style={{ backgroundImage: `url(${toAbsoluteUrl('/media/stock/600x400/img-17.jpg')})` }}
             ></div>
           </div>
           {/* end::Symbol */}
@@ -63,7 +63,7 @@ const ListsWidget8: React.FC<Props> = ({className}) => {
               <a href='#' className='btn btn-icon btn-light btn-sm border-0'>
                 <KTSVG
                   path='/media/icons/duotune/arrows/arr064.svg'
-                  className='svg-icon-2 svg-icon-primary'
+                  className='svg-icon-2 svg-icon-secondary'
                 />
               </a>
             </div>
@@ -78,7 +78,7 @@ const ListsWidget8: React.FC<Props> = ({className}) => {
           <div className='symbol symbol-60px symbol-2by3 me-4'>
             <div
               className='symbol-label'
-              style={{backgroundImage: `url(${toAbsoluteUrl('/media/stock/600x400/img-10.jpg')})`}}
+              style={{ backgroundImage: `url(${toAbsoluteUrl('/media/stock/600x400/img-10.jpg')})` }}
             ></div>
           </div>
           {/* end::Symbol */}
@@ -101,7 +101,7 @@ const ListsWidget8: React.FC<Props> = ({className}) => {
               <a href='#' className='btn btn-icon btn-light btn-sm border-0'>
                 <KTSVG
                   path='/media/icons/duotune/arrows/arr064.svg'
-                  className='svg-icon-2 svg-icon-primary'
+                  className='svg-icon-2 svg-icon-secondary'
                 />
               </a>
             </div>
@@ -116,7 +116,7 @@ const ListsWidget8: React.FC<Props> = ({className}) => {
           <div className='symbol symbol-60px symbol-2by3 me-4'>
             <div
               className='symbol-label'
-              style={{backgroundImage: `url(${toAbsoluteUrl('/media/stock/600x400/img-1.jpg')})`}}
+              style={{ backgroundImage: `url(${toAbsoluteUrl('/media/stock/600x400/img-1.jpg')})` }}
             ></div>
           </div>
           {/* end::Symbol */}
@@ -139,7 +139,7 @@ const ListsWidget8: React.FC<Props> = ({className}) => {
               <a href='#' className='btn btn-icon btn-light btn-sm border-0'>
                 <KTSVG
                   path='/media/icons/duotune/arrows/arr064.svg'
-                  className='svg-icon-2 svg-icon-primary'
+                  className='svg-icon-2 svg-icon-secondary'
                 />
               </a>
             </div>
@@ -154,7 +154,7 @@ const ListsWidget8: React.FC<Props> = ({className}) => {
           <div className='symbol symbol-60px symbol-2by3 me-4'>
             <div
               className='symbol-label'
-              style={{backgroundImage: `url(${toAbsoluteUrl('/media/stock/600x400/img-9.jpg')})`}}
+              style={{ backgroundImage: `url(${toAbsoluteUrl('/media/stock/600x400/img-9.jpg')})` }}
             ></div>
           </div>
           {/* end::Symbol */}
@@ -179,7 +179,7 @@ const ListsWidget8: React.FC<Props> = ({className}) => {
               <a href='#' className='btn btn-icon btn-light btn-sm border-0'>
                 <KTSVG
                   path='/media/icons/duotune/arrows/arr064.svg'
-                  className='svg-icon-2 svg-icon-primary'
+                  className='svg-icon-2 svg-icon-secondary'
                 />
               </a>
             </div>
@@ -194,4 +194,4 @@ const ListsWidget8: React.FC<Props> = ({className}) => {
   )
 }
 
-export {ListsWidget8}
+export { ListsWidget8 }

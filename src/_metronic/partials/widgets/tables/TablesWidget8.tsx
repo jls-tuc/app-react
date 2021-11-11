@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import {KTSVG} from '../../../helpers'
+import { KTSVG } from '../../../helpers'
 
 type Props = {
   className: string
 }
 
-const TablesWidget8: React.FC<Props> = ({className}) => {
+const TablesWidget8: React.FC<Props> = ({ className }) => {
   return (
     <div className={`card ${className}`}>
       {/* begin::Header */}
@@ -164,7 +164,7 @@ const TablesWidget8: React.FC<Props> = ({className}) => {
                         <span className='symbol-label bg-light-primary'>
                           <KTSVG
                             path='/media/icons/duotune/abstract/abs027.svg'
-                            className='svg-icon-2x svg-icon-primary'
+                            className='svg-icon-2x svg-icon-secondary'
                           />
                         </span>
                       </div>
@@ -422,7 +422,7 @@ const TablesWidget8: React.FC<Props> = ({className}) => {
                         <span className='symbol-label bg-light-primary'>
                           <KTSVG
                             path='/media/icons/duotune/abstract/abs027.svg'
-                            className='svg-icon-2x svg-icon-primary'
+                            className='svg-icon-2x svg-icon-secondary'
                           />
                         </span>
                       </div>
@@ -490,4 +490,4 @@ const TablesWidget8: React.FC<Props> = ({className}) => {
   )
 }
 
-export {TablesWidget8}
+export { TablesWidget8 }

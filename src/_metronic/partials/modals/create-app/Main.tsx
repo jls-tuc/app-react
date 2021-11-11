@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {FC, useEffect, useRef, useState} from 'react'
-import {KTSVG, toAbsoluteUrl} from '../../../helpers'
-import {Formik, Form, FormikValues, Field, ErrorMessage} from 'formik'
+import React, { FC, useEffect, useRef, useState } from 'react'
+import { KTSVG, toAbsoluteUrl } from '../../../helpers'
+import { Formik, Form, FormikValues, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import {StepperComponent} from '../../../assets/ts/components'
+import { StepperComponent } from '../../../assets/ts/components'
 
 interface ICreateAccount {
   appName: string
@@ -243,7 +243,7 @@ const Main: FC = () => {
                                     <span className='symbol-label bg-light-primary'>
                                       <KTSVG
                                         path='/media/icons/duotune/maps/map004.svg'
-                                        className='svg-icon-1 svg-icon-primary'
+                                        className='svg-icon-1 svg-icon-secondary'
                                       />
                                     </span>
                                   </span>
@@ -804,4 +804,4 @@ const Main: FC = () => {
   )
 }
 
-export {Main}
+export { Main }

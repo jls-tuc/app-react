@@ -1,16 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import clsx from 'clsx'
 import React from 'react'
-import {Link} from 'react-router-dom'
-import {KTSVG, toAbsoluteUrl} from '../../../helpers'
-import {useLayout} from '../../core'
-import {Header} from './Header'
-import {DefaultTitle} from './page-title/DefaultTitle'
-import {Topbar} from './Topbar'
+import { Link } from 'react-router-dom'
+import { KTSVG, toAbsoluteUrl } from '../../../helpers'
+import { useLayout } from '../../core'
+import { Header } from './Header'
+import { DefaultTitle } from './page-title/DefaultTitle'
+import { Topbar } from './Topbar'
 
 export function HeaderWrapper() {
-  const {config, classes, attributes} = useLayout()
-  const {header, aside} = config
+  const { config, classes, attributes } = useLayout()
+  const { header, aside } = config
 
   return (
     <div
@@ -52,12 +52,12 @@ export function HeaderWrapper() {
             <img
               alt='Logo'
               src={toAbsoluteUrl('/media/logos/logo-4.png')}
-              className='logo-default h-25px'
+              className='logo-default h-30px'
             />
             <img
               alt='Logo'
               src={toAbsoluteUrl('/media/logos/logo-5.png')}
-              className='logo-sticky h-25px'
+              className='logo-sticky h-30px'
             />
           </Link>
         </div>

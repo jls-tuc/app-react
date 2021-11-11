@@ -111,7 +111,7 @@ const Topbar: FC = () => {
             data-kt-menu-flip='bottom'
           >
             <img
-              className='h-25px w-25px rounded'
+              className='h-30px w-30px rounded'
               src={toAbsoluteUrl('/media/avatars/150-25.jpg')}
               alt='metronic'
             />
@@ -125,4 +125,4 @@ const Topbar: FC = () => {
   )
 }
 
-export {Topbar}
+export { Topbar }

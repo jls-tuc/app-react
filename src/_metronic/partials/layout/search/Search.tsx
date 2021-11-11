@@ -1,6 +1,6 @@
-import React, {FC, useEffect, useRef, useState} from 'react'
-import {SearchComponent} from '../../../assets/ts/components'
-import {KTSVG, toAbsoluteUrl} from '../../../helpers'
+import React, { FC, useEffect, useRef, useState } from 'react'
+import { SearchComponent } from '../../../assets/ts/components'
+import { KTSVG, toAbsoluteUrl } from '../../../helpers'
 
 const Search: FC = () => {
   const [menuState, setMenuState] = useState<"main" | "advanced" | "preferences">("main");
@@ -11,7 +11,7 @@ const Search: FC = () => {
   const emptyElement = useRef<HTMLDivElement | null>(null);
 
   const processs = (search: SearchComponent) => {
-    setTimeout(function() {
+    setTimeout(function () {
       const number = Math.floor(Math.random() * 6) + 1;
 
       // Hide recently viewed
@@ -127,7 +127,7 @@ const Search: FC = () => {
                   data-kt-search-element='preferences-show'
                   className='btn btn-icon w-20px btn-sm btn-active-color-primary me-1'
                   data-bs-toggle='tooltip'
-                  onClick={()=>{setMenuState("preferences")}}
+                  onClick={() => { setMenuState("preferences") }}
                   title='Show search preferences'
                 >
                   <KTSVG path='/media/icons/duotune/coding/cod001.svg' className='svg-icon-1' />
@@ -137,7 +137,7 @@ const Search: FC = () => {
                   data-kt-search-element='advanced-options-form-show'
                   className='btn btn-icon w-20px btn-sm btn-active-color-primary'
                   data-bs-toggle='tooltip'
-                  onClick={()=>{setMenuState("advanced")}}
+                  onClick={() => { setMenuState("advanced") }}
                   title='Show more search options'
                 >
                   <KTSVG path='/media/icons/duotune/arrows/arr072.svg' className='svg-icon-2' />
@@ -298,7 +298,7 @@ const Search: FC = () => {
                     <span className='symbol-label bg-light'>
                       <KTSVG
                         path='/media/icons/duotune/general/gen005.svg'
-                        className='svg-icon-2 svg-icon-primary'
+                        className='svg-icon-2 svg-icon-secondary'
                       />
                     </span>
                   </div>
@@ -314,7 +314,7 @@ const Search: FC = () => {
                     <span className='symbol-label bg-light'>
                       <KTSVG
                         path='/media/icons/duotune/general/gen032.svg'
-                        className='svg-icon-2 svg-icon-primary'
+                        className='svg-icon-2 svg-icon-secondary'
                       />
                     </span>
                   </div>
@@ -330,7 +330,7 @@ const Search: FC = () => {
                     <span className='symbol-label bg-light'>
                       <KTSVG
                         path='/media/icons/duotune/communication/com012.svg'
-                        className='svg-icon-2 svg-icon-primary'
+                        className='svg-icon-2 svg-icon-secondary'
                       />
                     </span>
                   </div>
@@ -346,7 +346,7 @@ const Search: FC = () => {
                     <span className='symbol-label bg-light'>
                       <KTSVG
                         path='/media/icons/duotune/communication/com006.svg'
-                        className='svg-icon-2 svg-icon-primary'
+                        className='svg-icon-2 svg-icon-secondary'
                       />
                     </span>
                   </div>
@@ -370,7 +370,7 @@ const Search: FC = () => {
                     <span className='symbol-label bg-light'>
                       <KTSVG
                         path='/media/icons/duotune/electronics/elc004.svg'
-                        className='svg-icon-2 svg-icon-primary'
+                        className='svg-icon-2 svg-icon-secondary'
                       />
                     </span>
                   </div>
@@ -388,7 +388,7 @@ const Search: FC = () => {
                     <span className='symbol-label bg-light'>
                       <KTSVG
                         path='/media/icons/duotune/graphs/gra001.svg'
-                        className='svg-icon-2 svg-icon-primary'
+                        className='svg-icon-2 svg-icon-secondary'
                       />
                     </span>
                   </div>
@@ -406,7 +406,7 @@ const Search: FC = () => {
                     <span className='symbol-label bg-light'>
                       <KTSVG
                         path='/media/icons/duotune/graphs/gra006.svg'
-                        className='svg-icon-2 svg-icon-primary'
+                        className='svg-icon-2 svg-icon-secondary'
                       />
                     </span>
                   </div>
@@ -424,7 +424,7 @@ const Search: FC = () => {
                     <span className='symbol-label bg-light'>
                       <KTSVG
                         path='/media/icons/duotune/graphs/gra002.svg'
-                        className='svg-icon-2 svg-icon-primary'
+                        className='svg-icon-2 svg-icon-secondary'
                       />
                     </span>
                   </div>
@@ -442,7 +442,7 @@ const Search: FC = () => {
                     <span className='symbol-label bg-light'>
                       <KTSVG
                         path='/media/icons/duotune/communication/com010.svg'
-                        className='svg-icon-2 svg-icon-primary'
+                        className='svg-icon-2 svg-icon-secondary'
                       />
                     </span>
                   </div>
@@ -460,7 +460,7 @@ const Search: FC = () => {
                     <span className='symbol-label bg-light'>
                       <KTSVG
                         path='/media/icons/duotune/finance/fin001.svg'
-                        className='svg-icon-2 svg-icon-primary'
+                        className='svg-icon-2 svg-icon-secondary'
                       />
                     </span>
                   </div>
@@ -478,7 +478,7 @@ const Search: FC = () => {
                     <span className='symbol-label bg-light'>
                       <KTSVG
                         path='/media/icons/duotune/graphs/gra002.svg'
-                        className='svg-icon-2 svg-icon-primary'
+                        className='svg-icon-2 svg-icon-secondary'
                       />
                     </span>
                   </div>
@@ -631,7 +631,7 @@ const Search: FC = () => {
 
             <div className='d-flex justify-content-end'>
               <button
-                onClick={(e)=>{ e.preventDefault(); setMenuState("main")}}
+                onClick={(e) => { e.preventDefault(); setMenuState("main") }}
                 className='btn btn-sm btn-light fw-bolder btn-active-light-primary me-2'
               >
                 Cancel
@@ -696,7 +696,7 @@ const Search: FC = () => {
 
             <div className='d-flex justify-content-end pt-7'>
               <button
-                  onClick={(e)=>{e.preventDefault(); setMenuState("main")}}
+                onClick={(e) => { e.preventDefault(); setMenuState("main") }}
                 className='btn btn-sm btn-light fw-bolder btn-active-light-primary me-2'
               >
                 Cancel
@@ -712,4 +712,4 @@ const Search: FC = () => {
   )
 }
 
-export {Search}
+export { Search }

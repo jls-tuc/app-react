@@ -54,4 +54,4 @@ const HeaderUserMenu: FC = () => {
   )
 }
 
-export {HeaderUserMenu}
+export { HeaderUserMenu }

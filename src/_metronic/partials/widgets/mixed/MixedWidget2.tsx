@@ -14,11 +14,11 @@ type Props = {
   chartHeight: string
 }
 
-const MixedWidget2: React.FC<Props> = ({className, chartColor, chartHeight, strokeColor}) => {
+const MixedWidget2: React.FC<Props> = ({ className, chartColor, chartHeight, strokeColor }) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
 
   const dashState: any = useSelector((state: ISTATE) => state.dashBoard)
-  const {modulos} = dashState
+  const { modulos } = dashState
 
   useEffect(() => {
     if (!chartRef.current) {
@@ -72,18 +72,17 @@ const MixedWidget2: React.FC<Props> = ({className, chartColor, chartHeight, stro
         {/* begin::Stats */}
         <div className='card-p mt-n20 position-relative mixed-widget-2-chart card-rounded-bottom'>
           {/* begin::Row */}
-          <div className='row g-0'>
+          <div className='row  pt-20'>
             {/* begin::Col */}
 
             {modulos.map((item: IMENU) => (
-              <div className='col bg-light-warning px-6 py-8 rounded-2 me-3 mb-7' key={item.id}>
-                <KTSVG
-                  path='/media/icons/duotune/general/gen032.svg'
-                  className='svg-icon-3x svg-icon-warning d-block my-3'
+              <div className='col rounded-2mb-7' key={item.id}>
+                <BotonMenu
+                  imagen={item.paginaInicio}
+                  pag_inicio={item.paginaInicio}
+                  nombre={item.nombre}
                 />
-                <Link to={item.paginaInicio}>
-                  <div className='text-warning fw-bold fs-6'>{item.nombre}</div>
-                </Link>
+
               </div>
             ))}
 
