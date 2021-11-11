@@ -1,4 +1,4 @@
-import {types} from './types'
+import { types } from './types'
 
 export const DashReducer = (state = {}, action: any) => {
   switch (action.type) {
@@ -9,6 +9,9 @@ export const DashReducer = (state = {}, action: any) => {
         perfil: action.payload.perfil,
         permisos: action.payload.permisos,
         isLogged: action.payload.isLogged,
+      }
+    case types.logout:
+      return {
       }
 
     default:

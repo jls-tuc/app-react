@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import {useState} from 'react'
-import {useDispatch} from 'react-redux'
-import {useFormik} from 'formik'
-import {login} from '../redux/AuthCRUD'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useFormik } from 'formik'
+import { login } from '../redux/AuthCRUD'
 import * as Yup from 'yup'
 import clsx from 'clsx'
 import jwt_decode from 'jwt-decode'
-import {loginAction} from '../actions/AuthActions'
-import {usrAction} from '../models/AuthModel'
-import {getOrg} from '../../../../_metronic/services/DashBoardServices'
-import {DashAction} from '../actions/DashActions'
+import { loginAction } from '../actions/AuthActions'
+import { usrAction } from '../models/AuthModel'
+import { getOrg } from '../../../../_metronic/services/DashBoardServices'
+import { DashAction } from '../actions/DashActions'
 
 const loginSchema = Yup.object().shape({
   usuario: Yup.string()
@@ -41,18 +41,18 @@ export function Login() {
   const formik = useFormik({
     initialValues,
     validationSchema: loginSchema,
-    onSubmit: (values, {setStatus, setSubmitting}) => {
+    onSubmit: (values, { setStatus, setSubmitting }) => {
       setLoading(true)
       setTimeout(() => {
         login(values.usuario, values.password)
           .then((res: any) => {
             setLoading(false)
-            const {foto, token} = res.data
+            const { foto, token } = res.data
             sessionStorage.setItem('token', token)
             const usData: usrAction = jwt_decode(token)
             dispatch(loginAction(token, foto, usData))
             getOrg().then((resp: any) => {
-              const {modulos, nombre, perfil, permisos} = resp.data[0].dependencias[0]
+              const { modulos, nombre, perfil, permisos } = resp.data[0].dependencias[0]
               const isLogged: boolean = true
               dispatch(DashAction(modulos, nombre, perfil, permisos, isLogged))
             })
@@ -87,7 +87,7 @@ export function Login() {
           {...formik.getFieldProps('usuario')}
           className={clsx(
             'form-control form-control-lg form-control-solid',
-            {'is-invalid': formik.touched.usuario && formik.errors.usuario},
+            { 'is-invalid': formik.touched.usuario && formik.errors.usuario },
             {
               'is-valid': formik.touched.usuario && !formik.errors.usuario,
             }
@@ -152,13 +152,13 @@ export function Login() {
         <button
           type='submit'
           id='kt_sign_in_submit'
-          className='btn btn-lg btn-primary w-100 mb-5'
+          className='btn btn-lg btn-secondary w-100 mb-5 text-white'
           disabled={formik.isSubmitting || !formik.isValid}
         >
           {!loading && <span className='indicator-label'>Continuar</span>}
           {loading && (
-            <span className='indicator-progress' style={{display: 'block'}}>
-              Please wait...
+            <span className='indicator-progress' style={{ display: 'block' }}>
+              Por favor Espere...
               <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
             </span>
           )}

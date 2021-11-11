@@ -18,4 +18,10 @@ $mode: default;
 
 //SCSS Personalizados
 
-@import "../../../app/modules/apps/Agenda/components/Agenda.scss"
+@import "../../../app/modules/apps/Agenda/components/Agenda.scss";
+@import "../../partials/widgets/botonmenu/BotonMenu.scss";
+
+
+.uppercase {
+  text-transform: uppercase;
+}

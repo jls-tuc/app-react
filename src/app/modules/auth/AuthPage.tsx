@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useEffect} from 'react'
-import {Redirect, Route, Switch} from 'react-router-dom'
-import {Registration} from './components/Registration'
-import {ForgotPassword} from './components/ForgotPassword'
-import {Login} from './components/Login'
-import {toAbsoluteUrl} from '../../../_metronic/helpers'
+import React, { useEffect } from 'react'
+import { Redirect, Route, Switch } from 'react-router-dom'
+import { Registration } from './components/Registration'
+import { ForgotPassword } from './components/ForgotPassword'
+import { Login } from './components/Login'
+import { toAbsoluteUrl } from '../../../_metronic/helpers'
 
 export function AuthPage() {
   useEffect(() => {
@@ -25,7 +25,7 @@ export function AuthPage() {
       <div className='d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20'>
         {/* begin::Logo */}
         <a href='#' className='mb-12'>
-          <img alt='Logo' src={toAbsoluteUrl('/media/logos/logo-2-dark.svg')} className='h-45px' />
+          <img alt='Logo' src={toAbsoluteUrl('/media/logos/apex.png')} className='h-60px' />
         </a>
         {/* end::Logo */}
         {/* begin::Wrapper */}

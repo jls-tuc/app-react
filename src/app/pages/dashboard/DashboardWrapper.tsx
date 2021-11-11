@@ -15,19 +15,28 @@ import {
   TablesWidget10,
   MixedWidget8,
 } from '../../../_metronic/partials/widgets'
-
+import {
+  motion,
+} from "framer-motion"
 const DashboardPage: FC = () => (
   <>
     {/* begin::Row */}
     <div className='row gy-5 g-xl-8'>
-      <div className='col-xxl-12'>
+      <motion.div className='col-xxl-12'
+        animate={{ x: 0, y: 10, opacity: 1 }}
+        initial={{ x: 0, y: 900 }}
+        transition={{
+          delay: 0,
+          x: { type: "spring", stiffness: 50 },
+          default: { duration: 0.7 },
+        }}>
         <MixedWidget2
           className=' mb-xl-8'
-          chartColor='danger'
+          chartColor='secondary'
           chartHeight='200px'
           strokeColor='#cb1e46'
         />
-      </div>
+      </motion.div>
       {/* <div className='col-xxl-4'>
         <ListsWidget5 className='card-xxl-stretch' />
       </div>

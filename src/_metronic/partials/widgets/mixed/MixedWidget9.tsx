@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useEffect, useRef} from 'react'
-import ApexCharts, {ApexOptions} from 'apexcharts'
-import {KTSVG} from '../../../helpers'
-import {getCSSVariableValue} from '../../../assets/ts/_utils'
-import {Dropdown1} from '../../content/dropdown/Dropdown1'
+import React, { useEffect, useRef } from 'react'
+import ApexCharts, { ApexOptions } from 'apexcharts'
+import { KTSVG } from '../../../helpers'
+import { getCSSVariableValue } from '../../../assets/ts/_utils'
+import { Dropdown1 } from '../../content/dropdown/Dropdown1'
 
 type Props = {
   className: string
@@ -11,7 +11,7 @@ type Props = {
   chartHeight: string
 }
 
-const MixedWidget9: React.FC<Props> = ({className, chartColor, chartHeight}) => {
+const MixedWidget9: React.FC<Props> = ({ className, chartColor, chartHeight }) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
@@ -149,7 +149,7 @@ const MixedWidget9: React.FC<Props> = ({className, chartColor, chartHeight}) => 
                   <div className='symbol-label bg-light-primary'>
                     <KTSVG
                       path='/media/icons/duotune/ecommerce/ecm010.svg'
-                      className='svg-icon-1 svg-icon-primary'
+                      className='svg-icon-1 svg-icon-secondary'
                     />
                   </div>
                 </div>
@@ -301,4 +301,4 @@ const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
   }
 }
 
-export {MixedWidget9}
+export { MixedWidget9 }

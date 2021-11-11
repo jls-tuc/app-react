@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useState} from 'react'
-import {KTSVG, toAbsoluteUrl} from '../../../../../../_metronic/helpers'
-import {IConnectedAccounts, connectedAccounts} from '../SettingsModel'
+import React, { useState } from 'react'
+import { KTSVG, toAbsoluteUrl } from '../../../../../../_metronic/helpers'
+import { IConnectedAccounts, connectedAccounts } from '../SettingsModel'
 
 const ConnectedAccounts: React.FC = () => {
   const [data, setData] = useState<IConnectedAccounts>(connectedAccounts)
 
   const updateData = (fieldsToUpdate: Partial<IConnectedAccounts>) => {
-    const updatedData = {...data, ...fieldsToUpdate}
+    const updatedData = { ...data, ...fieldsToUpdate }
     setData(updatedData)
   }
 
@@ -40,7 +40,7 @@ const ConnectedAccounts: React.FC = () => {
           <div className='notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6'>
             <KTSVG
               path='/media/icons/duotune/art/art006.svg'
-              className='svg-icon-2tx svg-icon-primary me-4'
+              className='svg-icon-2tx svg-icon-secondary me-4'
             />
             <div className='d-flex flex-stack flex-grow-1'>
               <div className='fw-bold'>
@@ -165,7 +165,7 @@ const ConnectedAccounts: React.FC = () => {
           <button onClick={click} className='btn btn-primary'>
             {!loading && 'Save Changes'}
             {loading && (
-              <span className='indicator-progress' style={{display: 'block'}}>
+              <span className='indicator-progress' style={{ display: 'block' }}>
                 Please wait...{' '}
                 <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
               </span>
@@ -177,4 +177,4 @@ const ConnectedAccounts: React.FC = () => {
   )
 }
 
-export {ConnectedAccounts}
+export { ConnectedAccounts }

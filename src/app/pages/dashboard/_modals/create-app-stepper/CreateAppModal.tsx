@@ -1,17 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useState, useRef} from 'react'
-import {Modal} from 'react-bootstrap-v5'
-import {StepperComponent} from '../../../../../_metronic/assets/ts/components'
-import {KTSVG} from '../../../../../_metronic/helpers'
-import {defaultCreateAppData, ICreateAppData} from './IAppModels'
+import React, { useState, useRef } from 'react'
+import { Modal } from 'react-bootstrap-v5'
+import { StepperComponent } from '../../../../../_metronic/assets/ts/components'
+import { KTSVG } from '../../../../../_metronic/helpers'
+import { defaultCreateAppData, ICreateAppData } from './IAppModels'
 
 type Props = {
   show: boolean
   handleClose: () => void
 }
 
-const CreateAppModal: React.FC<Props> = ({show, handleClose}) => {
+const CreateAppModal: React.FC<Props> = ({ show, handleClose }) => {
   const stepperRef = useRef<HTMLDivElement | null>(null)
   const stepper = useRef<StepperComponent | null>(null)
   const [data, setData] = useState<ICreateAppData>(defaultCreateAppData)
@@ -22,7 +22,7 @@ const CreateAppModal: React.FC<Props> = ({show, handleClose}) => {
   }
 
   const updateData = (fieldsToUpdate: Partial<ICreateAppData>) => {
-    const updatedData = {...data, ...fieldsToUpdate}
+    const updatedData = { ...data, ...fieldsToUpdate }
     setData(updatedData)
   }
 
@@ -243,7 +243,7 @@ const CreateAppModal: React.FC<Props> = ({show, handleClose}) => {
                             <span className='symbol-label bg-light-primary'>
                               <KTSVG
                                 path='/media/icons/duotune/maps/map004.svg'
-                                className='svg-icon-1 svg-icon-primary'
+                                className='svg-icon-1 svg-icon-secondary'
                               />
                             </span>
                           </span>
@@ -398,7 +398,7 @@ const CreateAppModal: React.FC<Props> = ({show, handleClose}) => {
                             name='appFramework'
                             value='HTML5'
                             checked={data.appFramework === 'HTML5'}
-                            onChange={() => updateData({appFramework: 'HTML5'})}
+                            onChange={() => updateData({ appFramework: 'HTML5' })}
                           />
                         </span>
                       </label>
@@ -428,7 +428,7 @@ const CreateAppModal: React.FC<Props> = ({show, handleClose}) => {
                             name='appFramework'
                             value='ReactJS'
                             checked={data.appFramework === 'ReactJS'}
-                            onChange={() => updateData({appFramework: 'ReactJS'})}
+                            onChange={() => updateData({ appFramework: 'ReactJS' })}
                           />
                         </span>
                       </label>
@@ -456,7 +456,7 @@ const CreateAppModal: React.FC<Props> = ({show, handleClose}) => {
                             name='appFramework'
                             value='Angular'
                             checked={data.appFramework === 'Angular'}
-                            onChange={() => updateData({appFramework: 'Angular'})}
+                            onChange={() => updateData({ appFramework: 'Angular' })}
                           />
                         </span>
                       </label>
@@ -486,7 +486,7 @@ const CreateAppModal: React.FC<Props> = ({show, handleClose}) => {
                             name='appFramework'
                             value='Vue'
                             checked={data.appFramework === 'Vue'}
-                            onChange={() => updateData({appFramework: 'Vue'})}
+                            onChange={() => updateData({ appFramework: 'Vue' })}
                           />
                         </span>
                       </label>
@@ -694,7 +694,7 @@ const CreateAppModal: React.FC<Props> = ({show, handleClose}) => {
                             name='appStorage'
                             value='Basic Server'
                             checked={data.appStorage === 'Basic Server'}
-                            onChange={() => updateData({appStorage: 'Basic Server'})}
+                            onChange={() => updateData({ appStorage: 'Basic Server' })}
                           />
                         </span>
                       </label>
@@ -722,7 +722,7 @@ const CreateAppModal: React.FC<Props> = ({show, handleClose}) => {
                             name='appStorage'
                             value='AWS'
                             checked={data.appStorage === 'AWS'}
-                            onChange={() => updateData({appStorage: 'AWS'})}
+                            onChange={() => updateData({ appStorage: 'AWS' })}
                           />
                         </span>
                       </label>
@@ -750,7 +750,7 @@ const CreateAppModal: React.FC<Props> = ({show, handleClose}) => {
                             name='appStorage'
                             value='Google'
                             checked={data.appStorage === 'Google'}
-                            onChange={() => updateData({appStorage: 'Google'})}
+                            onChange={() => updateData({ appStorage: 'Google' })}
                           />
                         </span>
                       </label>
@@ -863,4 +863,4 @@ const CreateAppModal: React.FC<Props> = ({show, handleClose}) => {
   )
 }
 
-export {CreateAppModal}
+export { CreateAppModal }

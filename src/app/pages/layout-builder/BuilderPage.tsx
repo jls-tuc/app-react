@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import clsx from 'clsx'
-import React, {useState} from 'react'
-import {KTSVG} from '../../../_metronic/helpers'
-import {getLayout, ILayout, LayoutSetup, useLayout} from '../../../_metronic/layout/core'
+import React, { useState } from 'react'
+import { KTSVG } from '../../../_metronic/helpers'
+import { getLayout, ILayout, LayoutSetup, useLayout } from '../../../_metronic/layout/core'
 
 const BuilderPage: React.FC = () => {
-  const {setLayout} = useLayout()
+  const { setLayout } = useLayout()
   const [tab, setTab] = useState('Header')
   const [config, setConfig] = useState<ILayout>(getLayout())
   const [configLoading, setConfigLoading] = useState<boolean>(false)
   const [resetLoading, setResetLoading] = useState<boolean>(false)
 
   const updateData = (fieldsToUpdate: Partial<ILayout>) => {
-    const updatedData = {...config, ...fieldsToUpdate}
+    const updatedData = { ...config, ...fieldsToUpdate }
     setConfig(updatedData)
   }
 
@@ -45,12 +45,12 @@ const BuilderPage: React.FC = () => {
           <div className='d-flex h-80px w-80px flex-shrink-0 flex-center position-relative'>
             <KTSVG
               path='/media/icons/duotune/abstract/abs051.svg'
-              className='svg-icon-primary position-absolute opacity-15'
+              className='svg-icon-secondary position-absolute opacity-15'
               svgClassName='h-80px w-80px'
             />
             <KTSVG
               path='/media/icons/duotune/coding/cod009.svg'
-              className='svg-icon-3x svg-icon-primary position-absolute'
+              className='svg-icon-3x svg-icon-secondary position-absolute'
             />
           </div>
           {/* end::Icon */}
@@ -76,7 +76,7 @@ const BuilderPage: React.FC = () => {
           >
             <li className='nav-item'>
               <a
-                className={clsx(`nav-link`, {active: tab === 'Header'})}
+                className={clsx(`nav-link`, { active: tab === 'Header' })}
                 onClick={() => setTab('Header')}
                 role='tab'
               >
@@ -85,7 +85,7 @@ const BuilderPage: React.FC = () => {
             </li>
             <li className='nav-item'>
               <a
-                className={clsx(`nav-link`, {active: tab === 'Toolbar'})}
+                className={clsx(`nav-link`, { active: tab === 'Toolbar' })}
                 onClick={() => setTab('Toolbar')}
                 role='tab'
               >
@@ -94,7 +94,7 @@ const BuilderPage: React.FC = () => {
             </li>
             <li className='nav-item'>
               <a
-                className={clsx(`nav-link`, {active: tab === 'Aside'})}
+                className={clsx(`nav-link`, { active: tab === 'Aside' })}
                 onClick={() => setTab('Aside')}
                 role='tab'
               >
@@ -103,7 +103,7 @@ const BuilderPage: React.FC = () => {
             </li>
             <li className='nav-item'>
               <a
-                className={clsx(`nav-link`, {active: tab === 'Content'})}
+                className={clsx(`nav-link`, { active: tab === 'Content' })}
                 onClick={() => setTab('Content')}
                 role='tab'
               >
@@ -112,7 +112,7 @@ const BuilderPage: React.FC = () => {
             </li>
             <li className='nav-item'>
               <a
-                className={clsx(`nav-link`, {active: tab === 'Footer'})}
+                className={clsx(`nav-link`, { active: tab === 'Footer' })}
                 onClick={() => setTab('Footer')}
                 role='tab'
               >
@@ -128,7 +128,7 @@ const BuilderPage: React.FC = () => {
           {/* begin::Body */}
           <div className='card-body'>
             <div className='tab-content pt-3'>
-              <div className={clsx('tab-pane', {active: tab === 'Header'})}>
+              <div className={clsx('tab-pane', { active: tab === 'Header' })}>
                 <div className='row mb-10'>
                   <label className='col-lg-3 col-form-label text-lg-end'>Fixed Header:</label>
                   <div className='col-lg-9 col-xl-4'>
@@ -200,7 +200,7 @@ const BuilderPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className={clsx('tab-pane', {active: tab === 'Toolbar'})}>
+              <div className={clsx('tab-pane', { active: tab === 'Toolbar' })}>
                 <div className='row mb-10'>
                   <label className='col-lg-3 col-form-label text-lg-end'>Display:</label>
                   <div className='col-lg-9 col-xl-4'>
@@ -247,7 +247,7 @@ const BuilderPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className={clsx('tab-pane', {active: tab === 'Content'})}>
+              <div className={clsx('tab-pane', { active: tab === 'Content' })}>
                 <div className='row mb-10'>
                   <label className='col-lg-3 col-form-label text-lg-end'>Width:</label>
                   <div className='col-lg-9 col-xl-4'>
@@ -272,7 +272,7 @@ const BuilderPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className={clsx('tab-pane', {active: tab === 'Aside'})}>
+              <div className={clsx('tab-pane', { active: tab === 'Aside' })}>
                 <div className='row mb-10'>
                   <label className='col-lg-3 col-form-label text-lg-end'>Display:</label>
                   <div className='col-lg-9 col-xl-4'>
@@ -299,7 +299,7 @@ const BuilderPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className={clsx('tab-pane', {active: tab === 'Footer'})}>
+              <div className={clsx('tab-pane', { active: tab === 'Footer' })}>
                 <div className='row mb-10'>
                   <label className='col-lg-3 col-form-label text-lg-end'>Width:</label>
                   <div className='col-lg-9 col-xl-4'>
@@ -335,7 +335,7 @@ const BuilderPage: React.FC = () => {
                 <button type='button' onClick={updateConfig} className='btn btn-primary me-2'>
                   {!configLoading && <span className='indicator-label'>Preview</span>}
                   {configLoading && (
-                    <span className='indicator-progress' style={{display: 'block'}}>
+                    <span className='indicator-progress' style={{ display: 'block' }}>
                       Please wait...{' '}
                       <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
                     </span>
@@ -350,7 +350,7 @@ const BuilderPage: React.FC = () => {
                 >
                   {!resetLoading && <span className='indicator-label'>Reset</span>}
                   {resetLoading && (
-                    <span className='indicator-progress' style={{display: 'block'}}>
+                    <span className='indicator-progress' style={{ display: 'block' }}>
                       Please wait...{' '}
                       <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
                     </span>
@@ -367,4 +367,4 @@ const BuilderPage: React.FC = () => {
   )
 }
 
-export {BuilderPage}
+export { BuilderPage }
