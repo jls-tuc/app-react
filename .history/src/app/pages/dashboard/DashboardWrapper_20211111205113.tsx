@@ -3,7 +3,6 @@ import React, {FC} from 'react'
 import {useIntl} from 'react-intl'
 import {PageTitle} from '../../../_metronic/layout/core'
 import {MixedWidget2} from '../../../_metronic/partials/widgets'
-import {motion} from 'framer-motion'
 
 const DashboardPage: FC = () => (
   <>

@@ -3,29 +3,26 @@ import React, {FC} from 'react'
 import {useIntl} from 'react-intl'
 import {PageTitle} from '../../../_metronic/layout/core'
 import {MixedWidget2} from '../../../_metronic/partials/widgets'
-import {motion} from 'framer-motion'
 
 const DashboardPage: FC = () => (
   <>
     {/* begin::Row */}
     <div className='row gy-5 g-xl-8'>
-      <motion.div
-        className='col-xxl-12'
-        animate={{x: 0, y: 10, opacity: 1}}
-        initial={{x: 0, y: 900}}
+      {/* <motion.div className='col-xxl-12'
+        animate={{ x: 0, y: 10, opacity: 1 }}
+        initial={{ x: 0, y: 900 }}
         transition={{
           delay: 0,
-          x: {type: 'spring', stiffness: 50},
-          default: {duration: 0.7},
-        }}
-      >
+          x: { type: "spring", stiffness: 50 },
+          default: { duration: 0.7 },
+        }}>
         <MixedWidget2
           className=' mb-xl-8'
           chartColor='secondary'
           chartHeight='200px'
           strokeColor='#cb1e46'
         />
-      </motion.div>
+      </motion.div> */}
       {/* <div className='col-xxl-4'>
         <ListsWidget5 className='card-xxl-stretch' />
       </div>
