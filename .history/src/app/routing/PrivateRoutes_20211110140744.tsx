@@ -2,7 +2,6 @@ import React, {Suspense, lazy} from 'react'
 import {Redirect, Route, Switch} from 'react-router-dom'
 import {FallbackView} from '../../_metronic/partials'
 import AgendaRoute from '../modules/apps/Agenda/AgendaRoute'
-import CivisRouter from '../modules/apps/Civis/ConsultaWsRouter'
 import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
 import {MenuTestPage} from '../pages/MenuTestPage'
 
@@ -19,7 +18,6 @@ export function PrivateRoutes() {
       <Switch>
         <Route path='/dashboard' component={DashboardWrapper} />
         <Route path='/agenda' component={AgendaRoute} />
-        <Route path='/civis' component={CivisRouter}></Route>
         <Route path='/builder' component={BuilderPageWrapper} />
         <Route path='/crafted/pages/profile' component={ProfilePage} />
         <Route path='/crafted/pages/wizards' component={WizardsPage} />
