@@ -2,7 +2,6 @@ import * as Yup from 'yup'
 import {useFormik} from 'formik'
 import clsx from 'clsx'
 import consultaWs from '../services/civis.service'
-import {useState} from 'react'
 
 const civisSchema = Yup.object().shape({
   dni: Yup.string()
@@ -19,20 +18,13 @@ const initialValues = {
 }
 
 function WebServicesActivos() {
-  const [loading, setLoading] = useState(false)
   const formik = useFormik({
     initialValues,
     validationSchema: civisSchema,
     onSubmit: (values, {setStatus, setSubmitting}) => {
-      consultaWs(values)
-        .then((res: any) => {
-          setLoading(false)
-        })
-        .catch(() => {
-          setLoading(false)
-          setSubmitting(false)
-          setStatus('Se produjo un error')
-        })
+      consultaWs(values).then((res: any) => {
+        console.log(res)
+      })
     },
   })
 
@@ -52,15 +44,16 @@ function WebServicesActivos() {
               <div className='d-flex justify-content-between align-items-start flex-wrap mb-2'>
                 <div className='d-flex flex-column'>
                   <div className='d-flex align-items-center mb-2'>
-                    <div className='text-gray-800 text-hover-primary fs-2 fw-bolder me-1'>
+                    <a href='#' className='text-gray-800 text-hover-primary fs-2 fw-bolder me-1'>
                       Civis
-                    </div>
+                    </a>
+                    <a href='#'></a>
                   </div>
 
                   <div className='d-flex flex-wrap fw-bold fs-6 mb-4 pe-2'>
-                    <div className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'>
+                    <a className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'>
                       Registro unico del ciudadano.
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -91,15 +84,8 @@ function WebServicesActivos() {
                     type='submit'
                     id='kt_sign_in_submit'
                     className='btn btn-lg btn-secondary w-100 mb-5 text-white'
-                    disabled={formik.isSubmitting || !formik.isValid}
                   >
-                    {!loading && <span className='indicator-label'>Buscar</span>}
-                    {loading && (
-                      <span className='indicator-progress' style={{display: 'block'}}>
-                        Por favor espere...
-                        <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
-                      </span>
-                    )}
+                    Buscar
                   </button>
                 </form>
               </div>

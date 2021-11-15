@@ -52,6 +52,7 @@ const CardPrincipal = () => {
                   </div>
                 </div>
               </div>
+
               <div className='d-flex flex-wrap flex-stack'>
                 <div className='d-flex align-items-center w-200px w-sm-300px flex-column mt-3'>
                   <div className='d-flex justify-content-between w-100 mt-auto mb-2'>

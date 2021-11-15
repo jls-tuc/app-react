@@ -52,15 +52,16 @@ function WebServicesActivos() {
               <div className='d-flex justify-content-between align-items-start flex-wrap mb-2'>
                 <div className='d-flex flex-column'>
                   <div className='d-flex align-items-center mb-2'>
-                    <div className='text-gray-800 text-hover-primary fs-2 fw-bolder me-1'>
+                    <a href='#' className='text-gray-800 text-hover-primary fs-2 fw-bolder me-1'>
                       Civis
-                    </div>
+                    </a>
+                    <a href='#'></a>
                   </div>
 
                   <div className='d-flex flex-wrap fw-bold fs-6 mb-4 pe-2'>
-                    <div className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'>
+                    <a className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'>
                       Registro unico del ciudadano.
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>

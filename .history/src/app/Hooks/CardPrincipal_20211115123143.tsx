@@ -19,12 +19,14 @@ const CardPrincipal = () => {
                       Civis
                     </div>
                   </div>
+
                   <div className='d-flex flex-wrap fw-bold fs-6 mb-4 pe-2'>
                     <div className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'>
                       Registro unico del ciudadano.
                     </div>
                   </div>
                 </div>
+
                 <div className='d-flex my-4'>
                   <div className='btn btn-sm btn-light me-2' id='kt_user_follow_button'>
                     <span className='indicator-label'>Follow</span>
@@ -52,6 +54,7 @@ const CardPrincipal = () => {
                   </div>
                 </div>
               </div>
+
               <div className='d-flex flex-wrap flex-stack'>
                 <div className='d-flex align-items-center w-200px w-sm-300px flex-column mt-3'>
                   <div className='d-flex justify-content-between w-100 mt-auto mb-2'>

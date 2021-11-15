@@ -1,4 +1,4 @@
-const CardPrincipal = () => {
+function WebServicesActivos() {
   return (
     <div>
       <div className='card mb-5 mb-xl-10'>
@@ -15,31 +15,35 @@ const CardPrincipal = () => {
               <div className='d-flex justify-content-between align-items-start flex-wrap mb-2'>
                 <div className='d-flex flex-column'>
                   <div className='d-flex align-items-center mb-2'>
-                    <div className='text-gray-800 text-hover-primary fs-2 fw-bolder me-1'>
+                    <a href='#' className='text-gray-800 text-hover-primary fs-2 fw-bolder me-1'>
                       Civis
-                    </div>
+                    </a>
+                    <a href='#'></a>
                   </div>
+
                   <div className='d-flex flex-wrap fw-bold fs-6 mb-4 pe-2'>
-                    <div className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'>
+                    <a className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'>
                       Registro unico del ciudadano.
-                    </div>
+                    </a>
                   </div>
                 </div>
+
                 <div className='d-flex my-4'>
-                  <div className='btn btn-sm btn-light me-2' id='kt_user_follow_button'>
+                  <a href='#' className='btn btn-sm btn-light me-2' id='kt_user_follow_button'>
                     <span className='indicator-label'>Follow</span>
                     <span className='indicator-progress'>
                       Please wait...
                       <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
                     </span>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href='#'
                     className='btn btn-sm btn-primary me-3'
                     data-bs-toggle='modal'
                     data-bs-target='#kt_modal_offer_a_deal'
                   >
                     Hire Me
-                  </div>
+                  </a>
                   <div className='me-0'>
                     <button
                       className='btn btn-sm btn-icon btn-bg-light btn-active-color-primary'
@@ -52,6 +56,7 @@ const CardPrincipal = () => {
                   </div>
                 </div>
               </div>
+
               <div className='d-flex flex-wrap flex-stack'>
                 <div className='d-flex align-items-center w-200px w-sm-300px flex-column mt-3'>
                   <div className='d-flex justify-content-between w-100 mt-auto mb-2'>
@@ -74,4 +79,4 @@ const CardPrincipal = () => {
   )
 }
 
-export default CardPrincipal
+export default WebServicesActivos
