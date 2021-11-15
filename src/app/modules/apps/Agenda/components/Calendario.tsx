@@ -1,13 +1,13 @@
-import {useState} from 'react'
-import {Calendar, momentLocalizer} from 'react-big-calendar'
-import {mensajes} from './CalendarioEsp'
+import { useState } from 'react'
+import { Calendar, momentLocalizer } from 'react-big-calendar'
+import { mensajes } from './CalendarioEsp'
 import moment from 'moment'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 
 import 'moment/locale/es'
-import {CalendarioEvento} from './CalendarioEvento'
-import {KTSVG} from '../../../../../_metronic/helpers'
-import {Dropdown1} from '../../../../../_metronic/partials'
+import { CalendarioEvento } from './CalendarioEvento'
+import { KTSVG } from '../../../../../_metronic/helpers'
+import { Dropdown1 } from '../../../../../_metronic/partials'
 import './Agenda.scss'
 
 moment.locale('es')
@@ -38,9 +38,9 @@ const Views = {
 const Calendario: React.FC = () => {
   const [, setlastView] = useState(localStorage.getItem('lastView') || Views.WEEK)
 
-  const onDoubleClick = (e: any) => {}
+  const onDoubleClick = (e: any) => { }
 
-  const onSelectEvent = (e: any) => {}
+  const onSelectEvent = (e: any) => { }
 
   const onViewChange = (e: any) => {
     setlastView(e)
@@ -249,4 +249,4 @@ const Calendario: React.FC = () => {
   )
 }
 
-export {Calendario}
+export { Calendario }

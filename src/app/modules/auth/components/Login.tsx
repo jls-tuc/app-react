@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import {useState} from 'react'
-import {useDispatch} from 'react-redux'
-import {useFormik} from 'formik'
-import {login} from '../Services/AuthService'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useFormik } from 'formik'
+import { login } from '../Services/AuthService'
 import * as Yup from 'yup'
 import clsx from 'clsx'
 import jwt_decode from 'jwt-decode'
-import {loginAction} from '../../../../setup/redux/ReduxActions/AuthActions'
-import {usrAction} from '../models/AuthModel'
-import {getOrg} from '../../../../_metronic/services/DashBoardServices'
-import {DashAction} from '../../../../setup/redux/ReduxActions/DashActions'
+import { loginAction } from '../../../../setup/redux/ReduxActions/AuthActions'
+import { usrAction } from '../models/AuthModel'
+import { getOrg } from '../../../../_metronic/services/DashBoardServices'
+import { DashAction } from '../../../../setup/redux/ReduxActions/DashActions'
 
 const loginSchema = Yup.object().shape({
   usuario: Yup.string()
@@ -158,7 +158,7 @@ export function Login() {
           {!loading && <span className='indicator-label'>Continuar</span>}
           {loading && (
             <span className='indicator-progress' style={{ display: 'block' }}>
-              Por favor Espere...
+              Por favor espere...
               <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
             </span>
           )}
