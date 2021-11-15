@@ -10,7 +10,7 @@ const QuickLinks: FC = () => (
   >
     <div
       className='d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-10'
-      style={{ backgroundImage: `url('${toAbsoluteUrl('/media/misc/apex_header.png')}')` }}
+      style={{ backgroundImage: `url('${toAbsoluteUrl('/media/misc/apex_header.jpg')}')` }}
     >
       <h3 className='text-white fw-bold mb-3'>Sistemas Habilitados</h3>
 
