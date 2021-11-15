@@ -2,7 +2,6 @@ import React, {Suspense, lazy} from 'react'
 import {Redirect, Route, Switch} from 'react-router-dom'
 import {FallbackView} from '../../_metronic/partials'
 import AgendaRoute from '../modules/apps/Agenda/AgendaRoute'
-import CivisRouter from '../modules/apps/Civis/ConsultaWsRouter'
 import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
 import {MenuTestPage} from '../pages/MenuTestPage'
 
