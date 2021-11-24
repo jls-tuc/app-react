@@ -64,6 +64,31 @@ function WebServicesActivos() {
                   </div>
                 </div>
               </div>
+              <div className='separator mb-4'></div>
+              <div className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'>
+                Seleccione una o varias tematicas para realizar la consulta.
+              </div>
+              <div className='d-flex flex-column flex-grow-1 pe-8'>
+                <div className='d-flex flex-wrap'>
+                  <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
+                    {/* Cardsssss */}
+                    <div className='d-flex align-items-center'>
+                      <div class='card'>
+                        <img className='card-img-top' src='...' alt='Card image cap' />
+                        <div className='card-body'>
+                          <h5 className='card-title'>Card title</h5>
+                          <p className='card-text'>
+                            Some quick example text to build on the card title and make up the bulk
+                            of the card's content.
+                          </p>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className='d-flex flex-wrap flex-stack'></div>
               <div className='d-flex flex-wrap flex-stack'>
                 <form onSubmit={formik.handleSubmit} noValidate>
