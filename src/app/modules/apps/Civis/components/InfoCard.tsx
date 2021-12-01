@@ -9,8 +9,6 @@ import jwt_decode from 'jwt-decode'
 
 type Props = {
   className: string
-  /* tematica: boolean
-  infoTematica: {} */
 }
 
 const civisSchema = Yup.object().shape({
@@ -25,7 +23,9 @@ const initialValues = {
   dni: '',
   sexo: '',
   usuario: '',
+  web_service: {},
 }
+let datosTemaicas: any = []
 
 const InfoCard: React.FC<Props> = ({className}) => {
   const [loading, setLoading] = useState(false)
@@ -36,22 +36,31 @@ const InfoCard: React.FC<Props> = ({className}) => {
 
   let dataUsStore: any = useSelector((state: ISTATE) => state.auth)
   let {usuario} = dataUsStore
-  let datosUs = jwt_decode(usuario)
+  let datosUs: any = jwt_decode(usuario)
 
   useEffect(() => {
     tematicas.length > 0 ? setselectTematicas(true) : setselectTematicas(false)
+    for (let tem of tematicas) {
+      for (let ws of tem.web_service) {
+        datosTemaicas.push(ws.nombre_ws)
+      }
+    }
+    return () => {}
   }, [tematicas])
 
   const formik = useFormik({
     initialValues,
     validationSchema: civisSchema,
 
-    onSubmit: (values, {setStatus, setSubmitting}) => {
-      console.log(values)
+    onSubmit: (values, {setStatus, setSubmitting, resetForm}) => {
+      values.usuario = datosUs.usuario
+      values.web_service = datosTemaicas
+
       consultaWs(values)
         .then((res: any) => {
           console.log(res)
           setLoading(false)
+          resetForm({})
         })
         .catch(() => {
           setLoading(false)
