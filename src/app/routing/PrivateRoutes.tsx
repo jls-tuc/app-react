@@ -3,7 +3,7 @@ import {Redirect, Route, Switch} from 'react-router-dom'
 import {FallbackView} from '../../_metronic/partials'
 import AgendaRoute from '../modules/apps/Agenda/AgendaRoute'
 import CivisRouter from '../modules/apps/Civis/ConsultaWsRouter'
-import PhonesRoute from '../modules/apps/Phones/PhonesRoutes'
+import PhonesRoute from '../modules/apps/ConsumosTelefonicos/ConsumosRoutes'
 import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
 import {MenuTestPage} from '../pages/MenuTestPage'
 
@@ -28,7 +28,7 @@ export function PrivateRoutes() {
         <Route path='/crafted/account' component={AccountPage} />
         <Route path='/apps/chat' component={ChatPage} />
         <Route path='/menu-test' component={MenuTestPage} />
-        <Route path='/phones' component={PhonesRoute} />
+        <Route path='/consumos-telefonicos' component={PhonesRoute} />
         <Redirect from='/auth' to='/dashboard' />
         <Redirect exact from='/' to='/dashboard' />
         <Redirect to='error/404' />

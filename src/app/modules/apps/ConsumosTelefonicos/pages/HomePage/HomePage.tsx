@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, useRouteMatch } from 'react-router-dom';
-import { CompanyCreatePage, CompanyListPage, LinesListPage } from '..';
+import {  EmpresaPage, ConsumoPage } from '..';
 import { PageLink, PageTitle } from '../../../../../../_metronic/layout/core'
-import { MainMenu } from '../../components'
+import { LineaGrid, MainMenu } from '../../components'
 
 
 const telefoniaBreadCrumbs: Array<PageLink> = [
@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
                 {/* begin::Header */}
                 <div className='card-header align-items-center border-0 mt-4'>
                     <h3 className='card-title align-items-start flex-column'>
-                        <span className='fw-bolder mb-2 text-dark'>Calendario de Actividades</span>
+                        <span className='fw-bolder mb-2 text-dark'>Gestión de Consumos Telefónicos</span>
                     </h3>
                     <MainMenu />
 
@@ -41,9 +41,9 @@ const HomePage: React.FC = () => {
                 <div className='row'>
                     <div className='col-2 card-body'>
                         <Switch>
-                        <Route exact path={`${url}/`} component={LinesListPage} />
-                        <Route exact path={`${url}/companies`} component={CompanyListPage} />
-                        <Route exact path={`${url}/company-create`} component={CompanyCreatePage} />
+                        <Route exact path={`${url}/`} component={LineaGrid} />
+                        <Route exact path={`${url}/companies`} component={EmpresaPage} />
+                        <Route exact path={`${url}/consumos`} component={ConsumoPage} />
                         </Switch>
                     </div>
                 </div>
