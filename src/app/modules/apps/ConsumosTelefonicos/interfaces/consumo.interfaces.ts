@@ -1,7 +1,7 @@
 export interface Empresa {
     _id: string;
     nombre: string;
-    comentarios?: string
+    observaciones?: string
 }
 
 export interface Linea {
@@ -39,6 +39,7 @@ export interface Dependencia {
 }
 
 export interface Organismo {
+    id: string,
     nombre: string,
     observaciones: string
 }

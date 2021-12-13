@@ -21,8 +21,10 @@ const MainMenu = () => {
                   Configuración
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><Link className="dropdown-item" to='/consumos-telefonicos/companies'>Empresas</Link></li>
                   <li><Link className="dropdown-item" to='/consumos-telefonicos/consumos'>Consumos</Link></li>
+                  <li><Link className="dropdown-item" to='/consumos-telefonicos/dependencias'>Dependencias</Link></li>
+                  <li><Link className="dropdown-item" to='/consumos-telefonicos/companies'>Empresas</Link></li>
+                  <li><Link className="dropdown-item" to='/consumos-telefonicos/organismos'>Organismos</Link></li>
                  {/*  <li><hr className="dropdown-divider" /></li>
                   <li><Link className="dropdown-item" to='#'>Something else here</Link></li> */}
                 </ul>

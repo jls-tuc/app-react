@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, useRouteMatch } from 'react-router-dom';
-import {  EmpresaPage, ConsumoPage } from '..';
+import {  EmpresaPage, ConsumoPage, OrganismoPage, DependenciaPage } from '..';
 import { PageLink, PageTitle } from '../../../../../../_metronic/layout/core'
 import { LineaGrid, MainMenu } from '../../components'
 
@@ -42,8 +42,10 @@ const HomePage: React.FC = () => {
                     <div className='col-2 card-body'>
                         <Switch>
                         <Route exact path={`${url}/`} component={LineaGrid} />
+                        <Route exact path={`${url}/organismos`} component={OrganismoPage} />
                         <Route exact path={`${url}/companies`} component={EmpresaPage} />
                         <Route exact path={`${url}/consumos`} component={ConsumoPage} />
+                        <Route exact path={`${url}/dependencias`} component={DependenciaPage} />
                         </Switch>
                     </div>
                 </div>

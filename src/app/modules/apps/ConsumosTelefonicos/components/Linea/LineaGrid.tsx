@@ -29,7 +29,7 @@ export default function LineaGrid() {
                     </tr>
                 </thead>
                 <tbody>
-                    {lista.map(item => <LineaItem datos={item} />)} 
+                    {lista.map(item => <LineaItem datos={item} key={item.numero} />)} 
                 </tbody>
             </table>
 

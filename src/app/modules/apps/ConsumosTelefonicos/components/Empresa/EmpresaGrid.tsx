@@ -30,7 +30,7 @@ export const EmpresaGrid = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {empresas.map(item => <EmpresaItem datos={item} />)}
+                    {empresas.map(item => <EmpresaItem datos={item} key={item._id} />)}
                 </tbody>
             </table>
         </>
